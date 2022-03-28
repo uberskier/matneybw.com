@@ -1,10 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>HTML5 Starter Template</title>
+    <meta charset="utf-8">
+    <title>Baylor Matney</title>
+    <link rel="stylesheet" href='Styles/HomePage.css'>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script defer src="scripts/Buttons.js"></script>
 </head>
 <body>
-    <p>Test</p>
+    <nav class="navbar fixed-top">
+        <div class="nav">
+            <a class="inital" href="index.html">BM</a>
+            <div class="links">
+                <ul class="nav-list">
+                    <li class="nav-home"><a class="hover active" href="index.html">Home</a>
+                    <li class="nav-resume"><a class="hover" href="Pages/Resume.html">Resume</a>
+                    <li class="nav-projects dropdown">
+                        <button class="dropbtn ">Projects</button>
+                        <div class="dropdown-content">
+                            <a href="Projects/Y86-64.html">Y86-64</a>
+                            <a href="Projects/Website.html">Personal Website</a>
+                        </div>
+                    <li class="nav-contact"><a class="hover" href="Pages/Contact.html">Contact</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </body>
 </html>
