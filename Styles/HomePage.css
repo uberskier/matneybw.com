@@ -2,6 +2,19 @@
     font-family: "Imroman10-regular"; src: url("../fonts/lmroman10-regular.otf");
 }
 
+@font-face {
+    font-family: "Imroman10-bold"; src: url("../fonts/lmroman10-bold.otf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .fixed-top {
     position: fixed;
     top: 0;
@@ -9,27 +22,42 @@
     left: 0;
     z-index: 1030;
 }
-ul {
-    margin-top: 0;
-}
 
 body {
     height: 100%;
     display: block;
-    font-size: 1.07rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 700;
     line-height: 1.5;
+    letter-spacing: 1.5px;
     font-family: "Imroman10-regular";
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+.background {
+    background-image: url("../images/City_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    opacity: 60%;
 }
 
 .inital {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: white;
     align-items: center;
     margin-right: 1rem;
 }
 
-li {
+.nav-list li {
     display: inline;
     padding-left: .25rem;
     padding-right: .25rem;
@@ -37,7 +65,6 @@ li {
 
 
 .navbar {
-    background-color: rgb(54, 54, 54);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,6 +93,7 @@ li {
     display: inline;
     list-style: none;
     align-items: center;
+    margin-top: 0;
 }
 
 .hover:hover {
@@ -78,59 +106,228 @@ a {
     cursor: pointer;
 }
 
-.dropbtn {
-    background: none;
-    border: none;
-    color:rgb(170, 170, 170);
-    font-size: 1.07rem;
-    font-weight: 400;
-    line-height: 1.5;
+
+.current a {
+    color: yellow;
+}
+
+.head {
+    width: 100%;
+    display: block;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 220px;
+}
+
+header {
+    position: relative!important;
+    margin-top: 2rem;
+    margin-bottom: 5px;
+    display: block;
+    background-size: 100% 100%;
+    margin-left: -600px;
+    margin-right: -600px;
+
+}
+
+h1 {
+    display: block;
+    font-size: 90px;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    width: 60%;
+    text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);
+    font-family: "Imroman10-bold";
+}
+h3 {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 1.3em!important;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    width: 60%;
+    text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);
     font-family: "Imroman10-regular";
 }
 
-.active {
-    color: white;
+.external-link {
+    list-style: none outside;
+    display: block;
+    text-align: center;
+    padding:0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    clear: left;
+    
+}
+.external {
+    position: relative;
+    margin: 24px 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
-.dropbtn::after {
+.external-links li {
+    text-align: center;
     display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: 0.3em solid transparent;
+    margin: 0;
+    padding: 10px;
+    
+}
+
+.scrolldown {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 0 0 30px 0;
+    bottom: 30px;
+}
+.scrolldown a {
+    padding:0;
+    padding-top: 180px;
+    position: relative;
+    bottom: 30px;
+    left: 49.85%;
+    margin-left: -29px;
+    color: #fff;
+    display: block;
+    height: 42px;
+    width: 42px;
+    font-size: 42px;
+    line-height: 42px;
+    color: #fff;
+    border-radius: 100%;
+    text-align: center;
+}
+
+i {
+    text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);
+}
+
+.about_body {
+    width: 100%;
+    display: block;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    right: .7%;
+}
+
+.aboutH{
+    display: block;
+    color: yellow;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 1.5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+    width: 60%;
+    text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);
+    font-family: "Imroman10-regular";
+}
+
+h2 {
+    font-family: "Imroman10-bold";
+    font-size: 2em;
+    letter-spacing: .2;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.information {
+    display: block;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    right: .7%;
+}
+
+img {
+    display: block;
+    align-items: center;
+    text-align: center;
+    height: 12.5rem;
+    width: 10rem;
+    border: 1px solid yellow;
+    border-radius: 50%;
+    margin: -1rem 1rem 0 22rem;
+    float: left;
+}
+
+.pinfo {
+    margin-top: 3rem;
+    text-align: left;
     color: rgb(170, 170, 170);
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    margin-top: 9.5px;
-    background-color: rgb(146, 146, 146);
-    min-width: 170px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+.skills {
+    flex: 0 0 66%;
+    max-width: 66%;
     display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 500px;
+    padding-top: 200px;
+    justify-content: space-between;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.profile {
+    float: left;
+    margin-right: 180px;
 }
 
-.dropdown-content a:hover {
-    background-color: rgb(214, 214, 214);
+.profileInfo {
+    font-size: .9em;
+    color:rgb(170, 170, 170);
+    margin-bottom: 50px;
 }
 
+.email {
+    color: rgba(50, 241, 255, 0.61);
+}
 
-.dropbtn:hover {
-    color: rgb(214, 214, 214);
+.skill {
+    float: left;
+
+}
+
+h4 {
+    Color: white;
+    font-family: "Imroman10-bold";
+    margin-bottom: 20px;
+}
+
+h5 {
+    color: rgb(92, 92, 92);
+    font-family: "Imroman10-bold";
+}
+
+.info {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: rgb(170, 170, 170);
 }

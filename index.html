@@ -4,27 +4,99 @@
     <meta charset="utf-8">
     <title>Baylor Matney</title>
     <link rel="stylesheet" href='Styles/HomePage.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href='fonts/fontello/css/fontello.css'>
     <script src="scripts/jquery-3.6.0.min.js"></script>
     <script defer src="scripts/Buttons.js"></script>
 </head>
 <body>
+    <div class="background">
+    </div>
     <nav class="navbar fixed-top">
         <div class="nav">
-            <a class="inital" href="index.html">BM</a>
+            <a class="inital" href="#home">BM</a>
             <div class="links">
                 <ul class="nav-list">
-                    <li class="nav-home"><a class="hover active" href="index.html">Home</a>
-                    <li class="nav-resume"><a class="hover" href="Pages/Resume.html">Resume</a>
-                    <li class="nav-projects dropdown">
-                        <button class="dropbtn ">Projects</button>
-                        <div class="dropdown-content">
-                            <a href="Projects/Y86-64.html">Y86-64</a>
-                            <a href="Projects/Website.html">Personal Website</a>
-                        </div>
-                    <li class="nav-contact"><a class="hover" href="Pages/Contact.html">Contact</a>
+                    <li class="li nav-home current"><a class="hover" href="#home">Home</a>
+                    <li class="li nav-about "><a class="hover" href="#about">About</a>
+                    <li class="li nav-resume "><a class="hover" href="#resume">Resume</a>
+                    <li class="li nav-projects "><a class="hover" href="#projects">Projects</a>
+                    <li class="li nav-activities "><a class="hover" href="#activities">Activities</a>
+                    <li class="li nav-contact "><a class="hover" href="#contact">Contact</a>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <header id="home">
+        <div class="head">
+            <h1>Baylor Matney<br></h1>
+            <h3>Appalachian State University Computer Science</h3>
+        </div>
+        <div class="external">
+            <ul class="external-links">
+                <li class="github">
+                    <a href="https://github.com/uberskier">
+                        <i class="fa fa-github" style="font-size:30px;color:white;text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);"></i>
+                    </a>
+                </li>
+                <li class="linkedin">
+                    <a href="https://www.linkedin.com/in/baylor-matney/">
+                        <i class="fa fa-linkedin" style="font-size:30px;color:white;text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:baylormatney@gmail.com">
+                        <i class="fa fa-envelope" style="font-size:30px;color:white;text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <p class="scrolldown">
+            <a href="#about"><i class="icon-down-circle"></i></a>
+        </p>
+    </header>
+
+    <section id="about">
+        <div class="about_body">
+            <h4 class="aboutH">About</h4>
+            <h2>Let me introduce myself.</h2>
+            <div class="information">
+                <img src="images/Me.jpg">
+                <p class="pinfo">I'm a senior Computer Science major at Appalachian State University. <br>My primary interest lies in software engeneering, but I am always
+                    <br>open trying and learning new things.
+                </p>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="profile">
+                <h4>PROFILE</h4>
+                <p class="profileInfo">
+                    Currently, seeking a full time software engineer<br> position. If you think I'm a good fit, please <br>contant me via
+                    <a class="email" href="baylormatney@gmail.com">baylormatney@gmail.com</a>.
+                </p>
+                <h5>FULLNAME:</h5>
+                <p class="info">Baylor William Matney</p>
+                <h5>BIRTH DATE:</h5>
+                <p class="info">December 12, 1999</p>
+                <h5>PHONE NUMBER:</h5>
+                <p class="info">(336) 486-1723</p>
+            </div>
+            <div class="skill">
+                <h4>SKILLS</h4>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="resume"></section>
+
+    <section id="projects"></section>
+
+    <section id="activities"></section>
+
+    <section id="contact"></section>
+
 </body>
 </html>
