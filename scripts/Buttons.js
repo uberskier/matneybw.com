@@ -97,12 +97,20 @@ function scrolling() {
             document.querySelector('.navbar').style.visibility="hidden";
             document.querySelector('.navbar').style.opacity="0";
             document.querySelector('.navbar').style.backgroundColor="transparent";
-            document.querySelector('.navbar').style.transition="all .5s";
+            for (let obj of li) {
+                obj.classList.remove("current");
+                document.querySelector('.navbar').style.transition="all .5s";
+            }
+            document.querySelector('.nav-home').classList.add("current");
         }
         if (window.scrollY > 725) {
             document.querySelector('.navbar').style.visibility="visible";
             document.querySelector('.navbar').style.opacity="1";
             document.querySelector('.navbar').style.backgroundColor="rgb(32,32,32)";
+            for (let obj of li) {
+                obj.classList.remove("current");
+            }
+            document.querySelector('.nav-about').classList.add("current");
             document.querySelector('.navbar').style.transition="all .5s";
         }
 
