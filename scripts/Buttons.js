@@ -1,68 +1,21 @@
 "use strict";
 
-function currentLi() {
-    let li = document.querySelectorAll(".li");
-    let a = document.querySelectorAll(".hover");
-
-    li[0].addEventListener('click', () => {
-        for (let obj of li) {
-            obj.classList.remove("current");
-        }
-        li[0].classList.add("current");
-    });
-
-    li[1].addEventListener('click', () => {
-        for (let obj of li) {
-            obj.classList.remove("current");
-        }
-        li[1].classList.add("current");
-    });
-
-    a[2].addEventListener('click', () => {
-        for (let obj of li) {
-            obj.classList.remove("current");
-        }
-        li[2].classList.add("current");
-    });
-
-    a[3].addEventListener('click', () => {
-        for (let obj of li) {
-            obj.classList.remove("current");
-        }
-        li[3].classList.add("current");
-    });
-
-    a[4].addEventListener('click', () => {
-        for (let obj of li) {
-            obj.classList.remove("current");
-        }
-        li[4].classList.add("current");
-    });
-
-    li[5].addEventListener('click', () => {
-        for (let obj of li) {
-            obj.classList.remove("current");
-        }
-        li[5].classList.add("current");
-    });
-}
-
 function hover() {
     let links = document.querySelectorAll('i');
     links[0].addEventListener("mouseover", () => {
-        links[0].style.color="yellow";
+        links[0].style.color="rgb(255, 72, 0)";
         links[0].style.transition="all .7s";
     });
     links[1].addEventListener("mouseover", () => {
-        links[1].style.color="yellow";
+        links[1].style.color="rgb(255, 72, 0)";
         links[1].style.transition="all .7s";
     });
     links[2].addEventListener("mouseover", () => {
-        links[2].style.color="yellow";
+        links[2].style.color="rgb(255, 72, 0)";
         links[2].style.transition="all .7s";
     });
     links[3].addEventListener("mouseover", () => {
-        links[3].style.color="yellow";
+        links[3].style.color="rgb(255, 72, 0)";
         links[3].style.transition="all .7s";
     });
 
@@ -80,44 +33,89 @@ function hover() {
     });
 }
 
-function scrolling() {
-    let li = document.querySelectorAll(".li");
-    window.addEventListener("scroll", () => {
-        if (window.scrollY < 180) {
-            document.querySelector('.navbar').style.visibility="visible";
-            document.querySelector('.navbar').style.opacity="1";
-            document.querySelector('.navbar').style.transition="all .5s";
-        }
-        if (window.scrollY > 180) {
-            document.querySelector('.navbar').style.visibility="hidden";
-            document.querySelector('.navbar').style.opacity="0";
-            document.querySelector('.navbar').style.transition="all .5s";
-        }
-        if (window.scrollY < 725 && window.scrollY > 180) {
-            document.querySelector('.navbar').style.visibility="hidden";
-            document.querySelector('.navbar').style.opacity="0";
-            document.querySelector('.navbar').style.backgroundColor="transparent";
-            for (let obj of li) {
-                obj.classList.remove("current");
-                document.querySelector('.navbar').style.transition="all .5s";
-            }
-            document.querySelector('.nav-home').classList.add("current");
-        }
-        if (window.scrollY > 725) {
-            document.querySelector('.navbar').style.visibility="visible";
-            document.querySelector('.navbar').style.opacity="1";
-            document.querySelector('.navbar').style.backgroundColor="rgb(32,32,32)";
-            for (let obj of li) {
-                obj.classList.remove("current");
-            }
-            document.querySelector('.nav-about').classList.add("current");
-            document.querySelector('.navbar').style.transition="all .5s";
-        }
 
+
+
+function fillStart() {
+    let h = $(window).height();
+    $("#home").css("height", h);
+    $(".head").css("margin-top", ((h/100)*15));
+    $(".scrolldown").css("margin-top", ((h/100)*25));
+}
+
+function fill() {
+    window.addEventListener("resize", () => {
+        let h = $(window).height();
+        $("#home").css("height", h);
+        $(".head").css("margin-top", ((h/100)*15));
+        $(".scrolldown").css("margin-top", ((h/100)*25));
     });
 }
 
+document.onscroll = function() {
+    let li = document.querySelectorAll(".li");
+    let home = document.querySelector(".head");
+    let about = document.querySelector("#about");
+    let resume = document.querySelector("#resume");
+    let projects = document.querySelector("#projects");
+    let nav = document.querySelector('.navbar');
+    
+    if (home.getBoundingClientRect().top <= 50) {
+        nav.style.visibility="hidden";
+        nav.style.opacity="0";
+        nav.style.transition="all .5s";
+    }
+    if (home.getBoundingClientRect().top > 50) {
+        nav.style.visibility="visible";
+        nav.style.opacity="1";
+        nav.style.backgroundColor="transparent";
+        for (let obj of li) {
+            obj.classList.remove("current");
+            nav.style.transition="all .5s";
+        }
+        document.querySelector('.nav-home').classList.add("current");
+    }
+    if(about.getBoundingClientRect().top <= 0) {
+        nav.style.visibility="visible";
+        nav.style.opacity="1";
+        nav.style.backgroundColor="rgb(42,42,42)";
+        for (let obj of li) {
+            obj.classList.remove("current");
+            nav.style.transition="all .5s";
+        }
+        document.querySelector('.nav-about').classList.add("current");
+    }
+    
+    if(resume.getBoundingClientRect().top <= 300){
+        for (let obj of li) {
+            obj.classList.remove("current");
+            nav.style.transition="all .5s";
+        }
+        document.querySelector('.nav-resume').classList.add("current");
+    }
+    if(projects.getBoundingClientRect().top <= 300){
+        for (let obj of li) {
+            obj.classList.remove("current");
+            nav.style.transition="all .5s";
+        }
+        document.querySelector('.nav-projects').classList.add("current");
+    }
+
+
+}
+
+function oneOn(){
+    document.getElementById("overlayOne").style.display= "block";
+}
+
+function oneOff(){
+    document.getElementById("overlayOne").style.display= "none";
+}
+
+
 $(function init() {
-    scrolling();
+    fillStart();
+    fill();
+    //scrolling();
     hover();
 });
