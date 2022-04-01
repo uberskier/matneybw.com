@@ -405,7 +405,7 @@ h5 {
 
 .projectsBody {
     width: 100%;
-    display: block;
+    display: inline-block;
     align-items: center;
     text-align: center;
     position: relative;
@@ -453,7 +453,7 @@ h5 {
     margin-top: 10px;
     text-align: left;
     padding-left: 40px;
-    padding-bottom: 15spx;
+    padding-bottom: 15px;
 }
 
 .pP{
@@ -464,14 +464,128 @@ h5 {
     text-align: left;
     padding-left: 40px;
     padding-right: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
-.sP {
+.pS {
     color: rgb(78, 78, 78);
     font-family: "Imroman10-regular";
     font-size: 10px;
     text-align: left;
-    
+    align-items: left;
     margin-bottom: 20px;
 }
+.one {
+    background-image: url("../images/processor.jpg");
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    
+}
+
+.website {
+    width:500px;
+    height: 375px;
+}
+
+#overlayTwo {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#website {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 500px;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    background-color: white;
+}
+
+.two {
+    position: static;
+    display: inline;
+    background-image: url("../images/website_img.png");
+    width: 250px;
+    height: 208px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#one {
+    width:250px;
+    height: 250px;
+    margin: 25px;
+    float: left;
+}
+#two {
+    width:250px;
+    height: 250px;
+    margin: 25px;
+    float: left;
+}
+#three {
+    width:250px;
+    height: 250px;
+    margin: 25px;
+    float: left;
+}
+
+#portfolio {
+    flex: 0 0 66%;
+    max-width: 66%;
+    display: block;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.three {
+    background-image: url("../images/RaspberryPi.png");
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    border: none;
+}
+
+#overlayThree {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#securityCam {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 500px;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    background-color: white;
+}
+

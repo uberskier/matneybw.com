@@ -112,6 +112,22 @@ function oneOff(){
     document.getElementById("overlayOne").style.display= "none";
 }
 
+function twoOn(){
+    document.getElementById("overlayTwo").style.display= "block";
+}
+
+function twoOff(){
+    document.getElementById("overlayTwo").style.display= "none";
+}
+
+function threeOn(){
+    document.getElementById("overlayThree").style.display= "block";
+}
+
+function threeOff(){
+    document.getElementById("overlayThree").style.display= "none";
+}
+
 
 $(function init() {
     fillStart();
