@@ -31,10 +31,86 @@ function hover() {
     $('.icon-down-circle').on("mouseleave",() => {
         links[3].style.color="white";
     });
+
+    let resume = document.querySelector(".resume-Download");
+    resume.addEventListener("mouseover", () => {
+        document.querySelector(".download").style.backgroundColor="rgba(46, 46, 46, 0.61)";
+        document.querySelector(".download").style.transition="all .7s";
+    });
+    $('.resume-Download').on("mouseleave", () => {
+        document.querySelector(".download").style.backgroundColor="rgba(50, 241, 255, 0.61)";
+    });
+
 }
 
+function linkBox() {
+    let linkBox = document.querySelectorAll(".linkBox-button");
 
+    linkBox[0].addEventListener("mouseover", () => {
+        linkBox[0].style.color="rgb(255, 72, 0)";
+        linkBox[0].style.transition="all .7s";
+    });
+    linkBox[1].addEventListener("mouseover", () => {
+        linkBox[1].style.color="rgb(255, 72, 0)";
+        linkBox[1].style.transition="all .7s";
+    });
+    linkBox[2].addEventListener("mouseover", () => {
+        linkBox[2].style.color="rgb(255, 72, 0)";
+        linkBox[2].style.transition="all .7s";
+    });
+    linkBox[3].addEventListener("mouseover", () => {
+        linkBox[3].style.color="rgb(255, 72, 0)";
+        linkBox[3].style.transition="all .7s";
+    });
+    linkBox[4].addEventListener("mouseover", () => {
+        linkBox[4].style.color="rgb(255, 72, 0)";
+        linkBox[4].style.transition="all .7s";
+    });
+    
+    $('.lb1').on("mouseleave",() => {
+        linkBox[0].style.color="white";
+    });
+    $('.lb2').on("mouseleave",() => {
+        linkBox[1].style.color="white";
+    });
+    $('.lb3').on("mouseleave",() => {
+        linkBox[2].style.color="white";
+    });
+    $('.lb4').on("mouseleave",() => {
+        linkBox[3].style.color="white";
+    });
+    $('.lb5').on("mouseleave",() => {
+        linkBox[4].style.color="white";
+    });
 
+}
+
+function emailHover() {
+    let email = document.querySelectorAll(".email");
+    email[0].addEventListener("mouseover", () => {
+        email[0].style.color = "rgba(70, 70, 70, 0.61)";
+        email[0].style.transition = "all .7s";
+    });
+    email[1].addEventListener("mouseover", () => {
+        email[1].style.color = "rgba(70, 70, 70, 0.61)";
+        email[1].style.transition = "all .7s";
+    });
+    $("#e1").on("mouseleave",() => {
+        email[0].style.color="rgba(50, 241, 255, 0.61)";
+    });
+    $("#e2").on("mouseleave",() => {
+        email[1].style.color="rgba(50, 241, 255, 0.61)";
+    });
+}
+
+function closeOverlay() {
+    let close = document.querySelector(".close");
+    close.addEventListener("click", () => {
+        oneOff();
+        twoOff();
+        threeOff();
+    });
+}
 
 function fillStart() {
     let h = $(window).height();
@@ -58,6 +134,8 @@ document.onscroll = function() {
     let about = document.querySelector("#about");
     let resume = document.querySelector("#resume");
     let projects = document.querySelector("#projects");
+    let activities = document.querySelector("#activities");
+    let contact = document.querySelector("#contact");
     let nav = document.querySelector('.navbar');
     
     if (home.getBoundingClientRect().top <= 50) {
@@ -101,6 +179,21 @@ document.onscroll = function() {
         document.querySelector('.nav-projects').classList.add("current");
     }
 
+    if(activities.getBoundingClientRect().top <= 300){
+        for (let obj of li) {
+            obj.classList.remove("current");
+            nav.style.transition="all .5s";
+        }
+        document.querySelector('.nav-activities').classList.add("current");
+    }
+    if(contact.getBoundingClientRect().top <= 300){
+        for (let obj of li) {
+            obj.classList.remove("current");
+            nav.style.transition="all .5s";
+        }
+        document.querySelector('.nav-contact').classList.add("current");
+    }
+
 
 }
 
@@ -132,6 +225,8 @@ function threeOff(){
 $(function init() {
     fillStart();
     fill();
-    //scrolling();
     hover();
+    linkBox();
+    closeOverlay();
+    emailHover();
 });

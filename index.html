@@ -59,7 +59,7 @@
     <section id="about">
         <div class="about_body">
             <h4 class="aboutH">About</h4>
-            <h2>Let me introduce myself.</h2>
+            <h2>Let Me Introduce Myself</h2>
             <div class="information">
                 <img class="profilePic" src="images/Me.jpg">
                 <p class="pinfo">I'm a senior Computer Science major at Appalachian State University. <br>My primary interest lies in software engeneering, but I am always
@@ -72,7 +72,7 @@
                     <h4>PROFILE</h4>
                     <p class="profileInfo">
                         Currently, seeking a full time software engineer<br> position. If you think I'm a good fit, please <br>contant me via
-                        <a class="email" href="mailto:baylormatney@gmail.com">baylormatney@gmail.com</a>.
+                        <a class="email" id="e1" href="mailto:baylormatney@gmail.com">baylormatney@gmail.com</a>.
                     </p>
                     <h5>FULLNAME:</h5>
                     <p class="info">Baylor William Matney</p>
@@ -115,7 +115,7 @@
         <div class="resumeBody">
             <h4 class="aboutH">Resume</h4>
             <img class="res" src="images/Baylor-Resume.png">
-            <a href="files/Baylor-Resume.pdf">
+            <a class="resume-Download" href="files/Baylor-Resume.pdf">
                 <button class="download">Download Resume</button>
             </a>
         </div>
@@ -124,6 +124,7 @@
     <section id="projects">
         <div class="projectsBody">
             <h4 class="aboutH">Projects</h4>
+            <h2 class="pro">Check Out My Projects!</h2>
             <div id="portfolio">
                 <div id="one">
                     <div id="overlayOne" onclick="oneOff()">
@@ -137,6 +138,10 @@
                                 <i class="fa fa-tag" style="font-size:10px;color:rgb(78, 78, 78);"></i>
                                 C/C++
                             </span>
+                            <div class="linkBox">
+                                <a class="linkBox-button lb1" href="https://github.com/uberskier/Y86-64-Simulator">DETAILS</a>
+                                <a class="linkBox-button close lb2">CLOSE</a>
+                            </div>
                         </div>
                     </div>
                     <button class="one" onclick="oneOn()"></button>
@@ -145,7 +150,20 @@
                     <div id="overlayTwo" onclick="twoOff()">
                         <div id="website">
                             <img class="website" src="images/website_big_img.png">
-
+                            <h6 class="pHead">Personal Website</h6>
+                            <p class="pP">
+                                My personal website was created to show my skills, resume, and portfolio. All coded by me without using any
+                                template websites. Codded mainly in HTML and CSS with effects and automated changes done in JavaScript. 
+                                This is my first iteration of the site, but I hope to incorporate mobile compatibility in the future. 
+                            </p>
+                            <span class="pS">
+                                <i class="fa fa-tag" style="font-size:10px;color:rgb(78, 78, 78);"></i>
+                                HTML5, CSS, JavaScript, Fontello, Font Awesome
+                            </span>
+                            <div class="linkBox">
+                                <a class="linkBox-button lb3" href="https://github.com/uberskier/matneybw.com">DETAILS</a>
+                                <a class="linkBox-button close lb4">CLOSE</a>
+                            </div>
                         </div>
                     </div>
                     <button class="two" onclick="twoOn()"></button>
@@ -153,7 +171,21 @@
                 <div id="three">
                     <div id="overlayThree" onclick="threeOff()">
                         <div id="SecurityCam">
-                            <img class="SecurityCam" src="">
+                            <img class="SecurityCam" src="images/RaspberryPi_cam.jpg">
+                            <h6 class="pHead">Raspberry Pi Security Camera</h6>
+                            <p class="pP">
+                                The Raspberry Pi Security Camera is a tripwire-activated system that uses facial recognition
+                                to alert someone when a person enters the building. Codded in Python this program is able to determine 
+                                when someone is entering the building and then emails a time-stamped image to a preset email address. 
+                                Unfortunately the code for this project was lost, but I am currently working on a new version. 
+                            </p>
+                            <span class="pS">
+                                <i class="fa fa-tag" style="font-size:10px;color:rgb(78, 78, 78);"></i>
+                                Python, Raspberry Pi
+                            </span>
+                            <div class="linkBox">
+                                <a class="linkBox-button close lb5">CLOSE</a>
+                            </div>
                         </div>
                     </div>
                     <button class="three" onclick="threeOn()"></button>
@@ -162,9 +194,78 @@
         </div>
     </section>
 
-    <section id="activities"></section>
+    <section id="activities">
+        <div class="activBody">
+            <h4 class="aboutH">Activities</h4>
+            <h2 class="activ">My Extracurriculars During Undergraduate</h2>
+            <h3 class="subTitle">Discription of my leadership & extracurricular activities</h3>
+            <h2 class="activTitles">Director of Finance</h2>
+            <h4 class="activStats">Delta Tau Delta △ January 2022 - December 2022</h4>
+            <p class="activDiscrip">
+                Instituted an overhaul of the budgetary process to remediate a lack of controls<br>
+                Established financial policies to ensure future sustainability<br>
+                Implemented new collection practices and incentives for brothers to remain dues-paying and active in the fraternity
+            </p>
+            <h2 class="activTitles">Housing Chair</h2>
+            <h4 class="activStats">Delta Tau Delta △ January 2020 - December 2021</h4>
+            <p class="activDiscrip">
+                Helped members find suitable housing near campus<br>
+                Voted on executive board decisions and helped make legislation<br>
+                Walked members through the leasing process and helped review leases<br> 
+            </p>
+            <h2 class="activTitles">Ski Racer</h2>
+            <h4 class="activStats">Appalachian State Alpine Ski Race Team △ August 2018 - April 2022</h4>
+            <p class="activDiscrip">
+                Practiced once a week in the offseason and twice a week in the winter<br>
+                Travled to races every weekend in the winter months<br>
+                Helped take the men's team to regionals in 2019
+            </p>
+            <h2 class="activTitles">Community Member</h2>
+            <h4 class="activStats">Service and Leadership Living Learning Community △ August 2018 - May 2019</h4>
+            <p class="activDiscrip">
+                Took specific leadership classes and did leadership training exercises<br>
+                Participated in service events monthly<br>
+                Lived on a dorm floor with other community members
+            </p>
+        </div>
+    </section>
 
-    <section id="contact"></section>
+    <section id="contact">
+        <div class="contactBody">
+            <h4 class="aboutH">Contact</h4>
+            <h2 class="activ">I'd Love To Hear From You</h2>
+            <div class="contactLinks">
+                <div class="location">
+                    <i class="fa fa-location-arrow"></i>
+                    <h5 class="contHead">Where To Find Me</h5>
+                    <p class="contP">
+                        150 Sequoia lane<br>
+                        Boone, NC<br>
+                        28607 US
+                    </p>
+                </div>
+                <div class="emailContact">
+                    <i class="fa fa-envelope"></i>
+                    <h5 class="contHead">Email Me At</h5>
+                    <p class="contP">
+                        baylormatney@gmail.com<br>
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                <div class="LinkedinContact">
+                    <i class="fa fa-linkedin"></i>
+                    <h5 class="contHead">Let's Connect</h5>
+                    <p class="contP">
+                        <a class="email" id="e2" href="https://www.linkedin.com/in/baylor-matney/">Linkedin Profile</a>
+                        <br>
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
